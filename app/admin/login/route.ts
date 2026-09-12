@@ -1,0 +1,2 @@
+import {NextResponse} from "next/server";import {cookie,sessionValue} from "@/lib/admin";
+export async function POST(req:Request){const form=await req.formData();if(form.get("passphrase")!==process.env.ADMIN_PASSPHRASE)return NextResponse.redirect(new URL("/admin?error=1",req.url));const r=NextResponse.redirect(new URL("/admin",req.url));r.cookies.set(cookie,sessionValue(),{httpOnly:true,secure:process.env.NODE_ENV==="production",sameSite:"strict",path:"/",maxAge:28800});return r}

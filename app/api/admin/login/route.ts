@@ -1,0 +1,2 @@
+import {NextResponse} from "next/server";import {cookie,sessionValue} from "@/lib/admin";
+export async function POST(req:Request){const {passphrase}=await req.json().catch(()=>({}));if(!process.env.ADMIN_PASSPHRASE||typeof passphrase!=="string"||passphrase!==process.env.ADMIN_PASSPHRASE)return NextResponse.json({error:"Invalid passphrase."},{status:401});const r=NextResponse.json({ok:true});r.cookies.set(cookie,sessionValue(),{httpOnly:true,secure:process.env.NODE_ENV==="production",sameSite:"strict",path:"/",maxAge:60*60*8});return r}
