@@ -82,14 +82,18 @@ For Software:
 
 #### Screenshots (Add at least 3)
 
-![Circuit discovery](docs/screenshots/circuit-list.jpeg)
-*A published circuit in the player discovery view.*
-
-![Player race](docs/screenshots/player-race.jpeg)
-*The player course map and race HUD, ready to begin a GPS-timed lap.*
-
-![Creator workspace](docs/screenshots/creator-workspace.jpeg)
-*The developer workspace for drawing a route and publishing a circuit.*
+<table>
+  <tr>
+    <td width="33.33%"><img src="docs/screenshots/circuit-list.jpeg" alt="Circuit discovery view" /></td>
+    <td width="33.33%"><img src="docs/screenshots/player-race.jpeg" alt="Player race map and HUD" /></td>
+    <td width="33.33%"><img src="docs/screenshots/creator-workspace.jpeg" alt="Creator workspace" /></td>
+  </tr>
+  <tr>
+    <td>A published circuit in the player discovery view.</td>
+    <td>The player course map and race HUD, ready to begin a GPS-timed lap.</td>
+    <td>The developer workspace for drawing a route and publishing a circuit.</td>
+  </tr>
+</table>
 
 #### Diagrams
 
